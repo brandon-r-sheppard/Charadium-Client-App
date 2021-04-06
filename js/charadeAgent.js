@@ -4,7 +4,7 @@ $(document).ready(function(){
 })
 
 function loadCharade(){
-    const url='http://mezorno-001-site1.etempurl.com/Charades';
+    const url='https://charadium.azurewebsites.net/Charades';
     $.ajax({
         url: url,
         type: "GET",
