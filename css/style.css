@@ -31,25 +31,16 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
-    overflow-y: hidden;
-}
+
 .container{
     text-align: center;     
     min-height: calc(100vh - 10rem);
 }
 
-.logo{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    padding-right: 1%;
-    padding-bottom: 1%;
-    color: black;
-}
 
-footer{
-    background: linear-gradient(239deg, #ffb5e8, #ff9cee, #c5a3ff, #d5aaff, #6eb5ff, #85e3ff, #ace7ff, #aff8d8, #bffcc6);
+
+.flairContainer{
+    background: linear-gradient(90deg, #ffb5e8, #ff9cee, #c5a3ff, #d5aaff, #6eb5ff, #85e3ff, #ace7ff, #aff8d8, #bffcc6);
     background-size: 550% 550%;
 
     -webkit-animation: flairAnim 25s ease infinite;
@@ -58,6 +49,17 @@ footer{
     animation: flairAnim 25s ease infinite;
     height: 10rem;
     color: white;
+}
+footer{
+    background: linear-gradient(90deg, #ffb5e8, #ff9cee, #c5a3ff, #d5aaff, #6eb5ff, #85e3ff, #ace7ff, #aff8d8, #bffcc6);
+    background-size: 550% 550%;
+
+    -webkit-animation: flairAnim 25s ease infinite;
+    -moz-animation: flairAnim 25s ease infinite;
+    -o-animation: flairAnim 25s ease infinite;
+    animation: flairAnim 25s ease infinite;
+    margin-top: -2px;
+    text-align: center;
 }
 
 .btn{
@@ -89,7 +91,58 @@ footer{
     font-size: 56px;
 }
 
+header{
+    background: linear-gradient(239deg, #ffb5e8, #ff9cee, #c5a3ff, #d5aaff, #6eb5ff, #85e3ff, #ace7ff, #aff8d8, #bffcc6);
+    background-size: 550% 550%;
+
+    -webkit-animation: flairAnim 25s ease infinite;
+    -moz-animation: flairAnim 25s ease infinite;
+    -o-animation: flairAnim 25s ease infinite;
+    animation: flairAnim 25s ease infinite;
+    height: 3rem;
+}
+.logo{
+    color: black;
+    text-decoration: none;
+    float: left;
+    font-size: 20px;
+    padding: 1%;
+}
+.disclaimer{ 
+    text-shadow:  1px 1px red;
+
+}
+
+
+
+.rulesContainer{
+    margin-top: 2%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: "main extra";
+}
+
+.mainRules{
+    grid-area: 'main';
+}
+.extraRules{
+    grid-area: 'extra';
+}
+
+.extraRules > ul{
+    list-style: none;
+    margin-top: 2%;
+}
+
+ li{
+    margin-bottom: 1%;
+}
 @media screen and (min-width: 100px) {
+    .rulesContainer{
+        grid-template-columns: 100%;
+        grid-template-areas: "main" "extra";
+    }
     .charade
     { 
         margin-top: 0%; 
@@ -104,24 +157,33 @@ footer{
         margin-top: 5%;
     }
     .container {
-        min-height: calc(100vh - 20rem);
+        min-height: calc(100vh - 10rem);
       }
-      footer{
-          height: 20rem;
+      .flairContainer{
+          height: 10rem;
       }
+      .btn{
+        margin-top: 35%;
+    }
 }
 @media screen and (min-width: 600px) {
     .btn{
-        margin-top: 10%;
+        margin-top: 25%;
     }
+    .container {
+        min-height: calc(100vh - 15rem);
+      }
+      .flairContainer{
+          height: 15rem;
+      }
 }
 
 @media screen and (min-width: 800px) {
     .container {
-      min-height: calc(100vh - 30rem);
+      min-height: calc(100vh - 20rem);
     }
-    footer{
-        height: 30rem;
+    .flairContainer{
+        height: 20rem;
     }
     .charade
     { 
@@ -134,28 +196,39 @@ footer{
         font-size: 46px; 
     }
     .btn{
-        margin-top: 8%;
+        margin-top: 15%;
     }
 }
 
 @media screen and (min-width: 1000px) {
     .container {
-      min-height: calc(100vh - 40rem);
+      min-height: calc(100vh - 30rem);
     }
-    footer{
-        height: 40rem;
+    .flairContainer{
+        height: 30rem;
     }
     .btn{
         margin-top: 2%;
     }
 }
+@media screen and (min-width: 1100px) {
+    .rulesContainer{
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "main extra";
+    }
+
+}
 @media screen and (min-width: 1600px) {
-    .container { min-height: calc(100vh - 50rem); }
-    footer{ height: 50rem; }
+    .container { height: calc(100vh - 33rem); }
+    .flairContainer{ height: 30rem; }
     .charade{ margin-top: 0%; }
     .time{ margin-top: 0%; }
 }
-
+hr{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-color: black;
+}
 
 @-webkit-keyframes flairAnim {
     0%{background-position:0% 63%}
