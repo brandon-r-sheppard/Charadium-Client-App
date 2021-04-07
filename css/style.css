@@ -61,7 +61,11 @@ footer{
     margin-top: -2px;
     text-align: center;
 }
-
+.flairTop{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 .btn{
     margin-top: 1%;
     border: none;
@@ -92,21 +96,15 @@ footer{
 }
 
 header{
-    background: linear-gradient(239deg, #ffb5e8, #ff9cee, #c5a3ff, #d5aaff, #6eb5ff, #85e3ff, #ace7ff, #aff8d8, #bffcc6);
+    background: linear-gradient(90deg, #ffb5e8, #ff9cee, #c5a3ff, #d5aaff, #6eb5ff, #85e3ff, #ace7ff, #aff8d8, #bffcc6);
     background-size: 550% 550%;
 
     -webkit-animation: flairAnim 25s ease infinite;
     -moz-animation: flairAnim 25s ease infinite;
     -o-animation: flairAnim 25s ease infinite;
     animation: flairAnim 25s ease infinite;
-    height: 3rem;
-}
-.logo{
-    color: black;
-    text-decoration: none;
-    float: left;
-    font-size: 20px;
-    padding: 1%;
+    height: 20rem;
+    position: relative;
 }
 .disclaimer{ 
     text-shadow:  1px 1px red;
@@ -154,33 +152,39 @@ header{
         font-size: 38px; 
     }
     .btn{
-        margin-top: 5%;
+        margin-top: 10%;
     }
     .container {
-        min-height: calc(100vh - 10rem);
+        min-height: calc(100vh - 18rem);
       }
       .flairContainer{
           height: 10rem;
       }
       .btn{
-        margin-top: 35%;
+        margin-top: 45%;
+    }
+    header{
+        height: 8rem;
     }
 }
 @media screen and (min-width: 600px) {
     .btn{
-        margin-top: 25%;
+        margin-top: 15%;
     }
     .container {
-        min-height: calc(100vh - 15rem);
+        min-height: calc(100vh - 30rem);
       }
       .flairContainer{
+          height: 15rem;
+      }
+      header{
           height: 15rem;
       }
 }
 
 @media screen and (min-width: 800px) {
     .container {
-      min-height: calc(100vh - 20rem);
+      min-height: calc(100vh - 35rem);
     }
     .flairContainer{
         height: 20rem;
@@ -196,19 +200,25 @@ header{
         font-size: 46px; 
     }
     .btn{
-        margin-top: 15%;
+        margin-top: 5%;
+    }
+    header{
+        height: 15rem;
     }
 }
 
 @media screen and (min-width: 1000px) {
     .container {
-      min-height: calc(100vh - 30rem);
+      height: calc(100vh - 50rem);
     }
     .flairContainer{
         height: 30rem;
     }
     .btn{
         margin-top: 2%;
+    }
+    header{
+        height: 20rem;
     }
 }
 @media screen and (min-width: 1100px) {
@@ -219,7 +229,7 @@ header{
 
 }
 @media screen and (min-width: 1600px) {
-    .container { height: calc(100vh - 33rem); }
+    .container { height: calc(100vh - 50rem); }
     .flairContainer{ height: 30rem; }
     .charade{ margin-top: 0%; }
     .time{ margin-top: 0%; }
