@@ -1,10 +1,15 @@
+var modal;
+
 $(document).ready(function(){
+    modal = document.getElementById("myModal");
     loadCharade();
     $('.btn').click(loadCharade);
+    
 })
 
 function loadCharade(){
     const url='https://charadium.azurewebsites.net/Charades';
+    modal.style.display = "block";
     $.ajax({
         url: url,
         type: "GET",
@@ -17,4 +22,5 @@ function loadCharade(){
             console.log(`Error ${error}`)
         }
     })
+    modal.style.display = "none";
 }
