@@ -228,11 +228,21 @@ header{
     }
 
 }
+@media screen and (max-width: 1366px){
+    .container { height: calc(100vh - 26rem); }
+    .flairContainer{ height: 15rem; }
+    header{
+        height: 12rem;
+    }
+}
 @media screen and (min-width: 1600px) {
     .container { height: calc(100vh - 50rem); }
     .flairContainer{ height: 30rem; }
     .charade{ margin-top: 0%; }
     .time{ margin-top: 0%; }
+    header{
+        height: 16rem;
+    }
 }
 hr{
     margin-top: 2%;
